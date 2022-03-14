@@ -3,6 +3,8 @@
 #include <gtest/gtest.h>
 #include <iostream>
 
+void show_pending_transactions();
+
 int main(int argc, char** argv)
 {
     if (false) // make false to run unit-tests
@@ -18,4 +20,12 @@ int main(int argc, char** argv)
             std::cout << "FAILED" << std::endl;
     }
     return 0;
+}
+
+void show_pending_transactions()
+{
+    std::cout << std::string(20, '*') << std::endl;
+    for (const auto& trx : pending_trxs)
+        std::cout << trx << std::endl;
+    std::cout << std::string(20, '*') << std::endl;
 }
