@@ -41,7 +41,7 @@ bool Client::transfer_money(std::string receiver, double value)
             S.add_pending_trx(trx, strx);
             return true;
         } else {
-            std::cout << "There is no vlient eith this ID" << std::endl;
+            std::cout << "There is no client with this ID" << std::endl;
             return false;
         }
     } else {
